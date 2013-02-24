@@ -8,3 +8,6 @@ class Cell {
   // 候補の数のリスト
   def candidate = []
 }
+
+class Observer {
+}
