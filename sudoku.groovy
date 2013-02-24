@@ -10,19 +10,21 @@ class Cell {
 }
 
 class Observer {
-  // 監視するセルを宣言
+  // 観察するセルを宣言
   def cells = []
   // 決定済みの値
   def fixeds = []
-  def allVal = 1..cells.size
 
-  // 監視している全てのセルで決定済みの値を取得する
+
+  // 観察している全てのセルで決定済みの値を取得する
   def fix() {
     fixeds = cells.findAll(cells.fixed != 0)
   }
       
-  // 監視しているセルに対して候補を埋める
-  def calc() {
+  // TODO ルールをクロージャで受け取り、担当とするセルから候補を決める
+  // 観察しているセルに対して候補を埋める
+  def updateCandidate() {
+    def allVal = 1..cells.size
     cells.findAll(cells.fixed == 0).each() {
       // TODO candidateが存在する場合はAnd演算
       // 候補を決定
