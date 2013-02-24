@@ -1,1 +1,0 @@
-fumo@yoshita-kentarou-no-MacBook-Pro.local.1202
