@@ -69,10 +69,30 @@ def output(cells) {
   }
 }
 
+/**
+ * 終了判定
+ * @return true: 終了してよい, false: まだ終わらせるわけにはいかない
+ */
+boolean judge(cells) {
+  // すべてのcellがfixになったなら終了
+  cells.every {
+    synchronized(it) {
+      return it.fixed > 0
+    }
+  }
+}
+
 println '----- 開始 -----'
 output(allCells)
 
-// ここで解く
+while (true) {
+  // ここで解く
+
+
+  if (judge(allCells)) {
+    break
+  }
+}
 
 println '----- 終了 -----'
 output(allCells)
