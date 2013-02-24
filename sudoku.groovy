@@ -34,9 +34,8 @@ class Observer {
 
 
 // ここからMain！
-// 問題はとりあえず
-// http://bit.ly/15caX31
-// の「ナンプレ超初級問題１」固定で。
+// 問題はとりあえず http://goo.gl/JgIcp の
+//「ナンプレ超初級問題１」固定で。
 
 // 全セルを定義
 def allCells = [
