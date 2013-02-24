@@ -12,9 +12,18 @@ class Cell {
 class Observer {
   // 観察するセルを宣言
   def cells = []
+  // TOOD 見直すかも
+  // ルール
+  def rule = {}
   // 決定済みの値
   def fixeds = []
 
+  // TODO 見直すかも
+  // 観察者生成
+  def create(def cells, def rule) {
+    this.cells = cells
+    this.rule = rule
+  }
 
   // 観察している全てのセルで決定済みの値を取得する
   def fix() {
@@ -22,6 +31,10 @@ class Observer {
   }
       
   // TODO ルールをクロージャで受け取り、担当とするセルから候補を決める
+  def updateCandidate4Rule() {
+    rule()
+  }
+
   // 観察しているセルに対して候補を埋める
   def updateCandidate() {
     def allVal = 1..cells.size
